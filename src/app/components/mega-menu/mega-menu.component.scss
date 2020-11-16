@@ -11,8 +11,10 @@
     background: #444;
 }
 .top-1{
-    background-color: #444;
+    background-color: rgb(99, 99, 99);
     color: white;
+    height: 80px;
+    
 }
 #main_menu .main_list
 {
@@ -115,9 +117,12 @@
 }
 
 .search{
-    margin-top: 10px;
-    margin-right: 25px;
-
+    .input-group{
+        padding-top: 12px;
+        input{
+            width: 400px;
+        }
+    }
 }
 .img-2{
     width: 18px;
@@ -126,11 +131,22 @@
 }
 .input-group{
     input{
-        background-color: rgb(136, 132, 132);
+        background-color: rgb(185, 185, 185);
     }
 }
 .input-group-append{
     button{
         background-color: #888484;
     }
+}
+.main_list_2{
+    color:#fff;
+    list-style-type:none;
+    float: left;
+    font-family: IRANSANS;
+    line-height: 32px;
+}
+.top-r{
+    margin-top: 18px;
+    padding-right: 20px;
 }

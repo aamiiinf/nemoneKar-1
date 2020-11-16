@@ -15,7 +15,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NotfoundComponent } from './routes/notfound/notfound.component';
 import { AdminPanelComponent } from './routes/admin-panel/admin-panel.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PageAsliComponent } from './components/page-asli/page-asli.component';
+import { PageAsliComponent } from './routes/page-asli/page-asli.component';
+import { ShapComponent } from './routes/shap/shap.component';
+import { SingInComponent } from './routes/rigester/sing-in/sing-in.component';
+import { SingUpComponent } from './routes/rigester/sing-up/sing-up.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { PageAsliComponent } from './components/page-asli/page-asli.component';
     FooterComponent,
     NotfoundComponent,
     AdminPanelComponent,
-    PageAsliComponent
+    PageAsliComponent,
+    ShapComponent,
+    SingInComponent,
+    SingUpComponent
   ],
   imports: [
     BrowserModule,

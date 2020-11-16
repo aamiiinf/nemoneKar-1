@@ -2,12 +2,14 @@
     
     <div class="top-1">
         <div class="d-flex">
-            <div class="mr-auto">
+            
+            <div class="mx-3 mt-3 flex-fill">
                 <img class="img" src="../../../assets/Logo1.png" alt="notFound">
             </div>
+
             <div class="search">
-                <div class="input-group">
-                    <input type="text" class="text-white rtl border border-0" placeholder="جستجو در محصولات ...">
+                <div class="input-group mt-2 mr-2 justify-content-end">
+                    <input type="text" class="text-white rtl border border-0 p-2" placeholder="جستجو در محصولات ...">
                     <div class="input-group-append">
                         <button class="btn" type="button">
                           <img class="img-2" src="../../../assets/icons8-search-50.png" />
@@ -15,8 +17,17 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="text-right flex-fill top-r">
+                <a routerLink="sing-in" class="text-white px-2 mx-2">ورود</a>
+                /
+                <a routerLink="sing-up" class="text-white px-2 mx-2">عضویت</a>
+                <button type="button" routerLink="app-shap" class="btn btn-outline-primary text-white px-2 mx-2">سبد خرید</button>
+            </div>
         </div>
     </div>
+
+    
     <div>
         <ul id="main_menu">
             <li class="main_list"><a href="">محصولات زیبایی<i class="icon"></i></a>
@@ -70,6 +81,12 @@
                         </a>
                     </ol>
                 </ul>
+            </li>
+            <li class="main_list_2 px-3">
+                <a class="text-white" href="#">درباره ما</a>
+            </li>
+            <li class="main_list_2 px-3">
+                <a class="text-white" href="#">تماس با ما</a>
             </li>
         </ul>        
     </div>
