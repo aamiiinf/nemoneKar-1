@@ -1,34 +1,26 @@
-<div class="d-flex flex-column">
+<div class="container-fluid p-0 dis_n rtl">
     
-    <div class="top-1">
-        <div class="d-flex">
-            
-            <div class="mx-3 mt-3 flex-fill">
-                <img class="img" src="../../../assets/Logo1.png" alt="notFound">
-            </div>
+    <div class="row top-1">
+        <div class="col-sm-4 text-right">
+            <button type="button" routerLink="app-shap" class="btn btn-outline-primary btn-1">سبد خرید</button>
 
-            <div class="search">
-                <div class="input-group mt-2 mr-2 justify-content-end">
-                    <input type="text" class="text-white rtl border border-0 p-2" placeholder="جستجو در محصولات ...">
-                    <div class="input-group-append">
-                        <button class="btn" type="button">
-                          <img class="img-2" src="../../../assets/icons8-search-50.png" />
-                        </button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-right flex-fill top-r">
-                <a routerLink="sing-in" class="text-white px-2 mx-2">ورود</a>
-                /
-                <a routerLink="sing-up" class="text-white px-2 mx-2">عضویت</a>
-                <button type="button" routerLink="app-shap" class="btn btn-outline-primary text-white px-2 mx-2">سبد خرید</button>
-            </div>
+            <a routerLink="sing-in" class="text-white px-2 mx-2">ورود</a>
+            /
+            <a routerLink="sing-up" class="text-white px-2 mx-2">عضویت</a>
+        </div>
+        <div class="col-sm-4">
+            <form style="text-align:center">
+                <input type="text" name="search" placeholder="جستجو ...">
+            </form>
+        </div>
+        <div class="col-sm-4">
+            <img class="img" src="../../../assets/Logo1.png" alt="notFound">
         </div>
     </div>
 
     
-    <div>
+    <div class="sticky-top">
+        <nav class="">
         <ul id="main_menu">
             <li class="main_list"><a href="">محصولات زیبایی<i class="icon"></i></a>
                 <ul>
@@ -83,11 +75,13 @@
                 </ul>
             </li>
             <li class="main_list_2 px-3">
-                <a class="text-white" href="#">درباره ما</a>
+                <a class="text_color" href="#">درباره ما</a>
             </li>
             <li class="main_list_2 px-3">
-                <a class="text-white" href="#">تماس با ما</a>
+                <a class="text_color" href="#">تماس با ما</a>
             </li>
-        </ul>        
+        </ul>  
+        </nav>
+      
     </div>
-</div>
+</div>    

@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    text-align: right;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .div-style{
+    font-size:30px;
+    cursor:pointer;
+    text-align: right;
+    padding: 0px 15px;
+    color: white;
+  }
+  .div-style:hover{
+    color:#ffb400 !important;
+  }
+  #div-1{
+    background-color: rgb(99, 99, 99);
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  @media screen and (min-width: 680px) {
+      #div-1{
+          display: none;
+      }
+  }

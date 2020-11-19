@@ -19,6 +19,9 @@ import { PageAsliComponent } from './routes/page-asli/page-asli.component';
 import { ShapComponent } from './routes/shap/shap.component';
 import { SingInComponent } from './routes/rigester/sing-in/sing-in.component';
 import { SingUpComponent } from './routes/rigester/sing-up/sing-up.component';
+import { MainFeaturesComponent } from './components/main-features/main-features.component';
+import { MainOneComponent } from './components/main-one/main-one.component';
+import { MainTwoComponent } from './components/main-two/main-two.component';
 
 
 @NgModule({
@@ -34,15 +37,18 @@ import { SingUpComponent } from './routes/rigester/sing-up/sing-up.component';
     PageAsliComponent,
     ShapComponent,
     SingInComponent,
-    SingUpComponent
+    SingUpComponent,
+    MainFeaturesComponent,
+    MainOneComponent,
+    MainTwoComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot(),
-    FormsModule,
-    AppRoutingModule,
-  ],
+     MDBBootstrapModule.forRoot(),
+     FormsModule,
+     AppRoutingModule,
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })
