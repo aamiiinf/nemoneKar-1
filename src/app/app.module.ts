@@ -16,7 +16,6 @@ import { NotfoundComponent } from './routes/notfound/notfound.component';
 import { AdminPanelComponent } from './routes/admin-panel/admin-panel.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PageAsliComponent } from './routes/page-asli/page-asli.component';
-import { ShapComponent } from './routes/shap/shap.component';
 import { SingInComponent } from './routes/rigester/sing-in/sing-in.component';
 import { SingUpComponent } from './routes/rigester/sing-up/sing-up.component';
 import { MainFeaturesComponent } from './components/main-features/main-features.component';
@@ -35,7 +34,6 @@ import { MainTwoComponent } from './components/main-two/main-two.component';
     NotfoundComponent,
     AdminPanelComponent,
     PageAsliComponent,
-    ShapComponent,
     SingInComponent,
     SingUpComponent,
     MainFeaturesComponent,
