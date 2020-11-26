@@ -134,6 +134,9 @@ input[type=email], input[type=password] {
 .register .nav-tabs .nav-link:hover {
     border: none;
 }
+.rtl{
+  direction: rtl;
+}
 
 .register .nav-tabs .nav-link.active {
     width: 100px;

@@ -4,9 +4,8 @@
     <div class="row">
         <!-- Right Side Title -->
         <div class="col-12 col-md-3 register-right">
-            <h3>خوش آمدید</h3>
-            <p>تنها در چند ثانیه عضو شوید.</p>
-            <input type="submit" name="" value="ورود به سایت"/><br/>
+
+            <input type="button" routerLink="/main" routerLinkActive="active" value="ورود به سایت"/><br/>
         </div>
         <!-- /Right Side Title -->
         <!-- Left Side Forms -->
@@ -26,32 +25,41 @@
                     <!-- Tab 1 -->
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <h3 class="register-heading">ورود</h3>
-                        <form action="send_mail.php" method="post">
+                        <div>
                             <div class="row register-form mx-auto">
-                
+
                                 <div class="col-12 col-md-12">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="پست الکترونیک *" value="" />
+                                  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+                                    <div class="form-group md-form">
+                                        <input mdbInput mdbValidate type="email" name="email"
+                                              ngModel #email="ngModel" class="form-control mb-4"
+                                              placeholder="پست الکترونیک *" required pattern="[^ @]*@[^ @]*[.com]" />
+                                        <mdb-error *ngIf="email.invalid && (email.dirty || email.touched)">لطفا ایمیل خود را وارد کنید</mdb-error>
+                                        <mdb-success *ngIf="email.valid && (email.dirty || email.touched)">ایمیل مورد تایید است</mdb-success>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="رمز عبور *" value="" />
+                                    <div class="form-group md-form">
+                                        <input mdbInput mdbValidate
+                                              type="password" name="password"
+                                              [(ngModel)]="minLength" required minlength="8"
+                                              ngModel #password="ngModel"
+                                              class="form-control" placeholder="رمز عبور *" />
+                                        <mdb-error *ngIf="password.invalid && (password.dirty || password.touched)">پسورد باید 8 رقم یا بیشتر باشد</mdb-error>
+                                        <mdb-success *ngIf="password.valid && (password.dirty || password.touched)">پسورد مورد تایید است</mdb-success>
                                     </div>
-                            
-                                    <input type="submit" class="btnRegister"  value="ورود"/>
-                                    
+
+                                    <input type="submit" class="btnRegister" value="ورود"/>
+                                  </form>
+
                                 </div>
                                 <br/>
-                                    <a href="#">ساخت حساب کاربری</a>
+                                    <a routerLink="/sing-in" routerLinkActive="active">ساخت حساب کاربری</a>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                    <!-- /Tab 1 -->
-                    <!-- Tab 2 -->
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 <app-footer></app-footer>

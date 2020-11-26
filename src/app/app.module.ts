@@ -2,11 +2,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 
+// MDB Angular Free
+// Angular Forms Modules
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { InputsModule, InputUtilitiesModule, WavesModule, ButtonsModule } from 'angular-bootstrap-md'
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { FormsModule } from '@angular/forms';
 import { MegaMenuComponent } from './components/mega-menu/mega-menu.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { MainTopComponent } from './components/main-top/main-top.component';
@@ -38,18 +42,21 @@ import { MainTwoComponent } from './components/main-two/main-two.component';
     SingUpComponent,
     MainFeaturesComponent,
     MainOneComponent,
-    MainTwoComponent
+    MainTwoComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-     MDBBootstrapModule.forRoot(),
-     FormsModule,
-     AppRoutingModule,
+    MDBBootstrapModule.forRoot(),
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    InputsModule, InputUtilitiesModule, WavesModule, ButtonsModule
    ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor() {}
  }

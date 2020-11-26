@@ -11,8 +11,8 @@ import { SingUpComponent } from './routes/rigester/sing-up/sing-up.component';
 const appRoutes: Routes = [
   { path: 'main', component: PageAsliComponent},
   { path: 'AdminPanel', component: AdminPanelComponent },
-  { path: 'main/sing-up', component: SingUpComponent },
-  { path: 'main/sing-in', component: SingInComponent },
+  { path: 'sing-up', component: SingUpComponent },
+  { path: 'sing-in', component: SingInComponent },
   { path: '',   redirectTo: '/main', pathMatch: 'full' },
   { path: '**', component: NotfoundComponent }
 ];
