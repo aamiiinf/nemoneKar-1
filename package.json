@@ -24,7 +24,7 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@types/chart.js": "^2.9.28",
     "angular-bootstrap-md": "^10.0.0",
-    "animate.css": "^4.1.1",
+    "animate.css": "^3.7.2",
     "body-parser": "^1.19.0",
     "chart.js": "2.5.0",
     "cuppa-ng2-slidemenu": "^2.0.0",
@@ -36,7 +36,7 @@
     "morgan": "^1.10.0",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "^0.11.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1001.2",

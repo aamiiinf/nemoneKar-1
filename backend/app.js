@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const session = require('express-session')
+const session = require('express-session');
 
 const app = express();
 
@@ -10,15 +10,15 @@ mongoose.connect("mongodb://localhost/nemoneKar-1") ;
 
 const Schema = mongoose.Schema;
 var userSchema = new Schema({
-  email : String,
-  name : String,
-  password : String,
-  password_2 : String,
-  mobil : String,
-  shahr : String,
-  jensiat : String,
-  tavalod : String
-}) ;
+  name: String,
+  family: String,
+  password: String,
+  password2: String,
+  email: String,
+  tell: Number,
+  titel: String
+
+});
 var InputModel = mongoose.model("User" , userSchema ) ;
 
 app.use(morgan('common')) ;
@@ -44,60 +44,56 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post("/api/singup", (req, res, next) => {
-  console.log(req.body);
-});
-
 app.post("/api/singin", (req, res, next) => {
   var formData = req.body;
   var name = formData.name;
   var family = formData.family;
-  var email = formData.email;
   var password = formData.password;
   var password2 = formData.password2;
-  var titel = formData.titel;
+  var email = formData.email;
   var tell = formData.tell;
+  var titel = formData.titel;
 
-if(name.length && family.length
-  && password.length && password2.length
-  && titel.length && tell.length) {
-    if(password.length >=8 && password_2.length >=8){
-      if(password === password_2){
+ if(
+    name.length &&
+    family.length &&
+    password.length &&
+    password2.length &&
+    email.length //&&
+   // tell.length &&
+  //  titel.length
+    ) {
+     if(password === password2){
         InputModel.find({email}, function (err, docs) {
           if (err) {throw err}
           else if(docs.length){
-              res.send('ایمیل قبلا وارد شده')
+              res.json({msg:"ایمیل قبلا وارد شده"});
           }else{
             var newUser = new InputModel({
-              email : formData.email,
-              name : formData.name,
-              password : formData.password,
-              password_2 : formData.password_2,
-              mobil : formData.mobil,
-              shahr : formData.shahr,
-              jensiat : formData.jensiat,
-              tavalod : formData.tavalod
+              name: formData.name,
+              family: formData.family,
+              password: formData.password,
+              password2: formData.password2,
+              email: formData.email,
+              tell : formData.tell,
+              titel : formData.titel,
             });
             newUser.save() ;
             console.log(newUser);
             console.log('sabte name ba mofaghiat anjam shod');
-            res.send('ثبت نام با موفقیت انجام شد');
-            //res.sendFile(__dirname + '/views/new_aghahi.html')
+            res.json({msg2:"ثبت نام با موفقیت انجام شد"});
           }
-
-        });
+       });
       }else{
-        res.send('پسورد با تکرار آن مطابقت ندارد')
+        res.json({msg:"پسورد مطابقت ندارد"});
       }
-
-    }else{
-      res.send('پسورد باید 8 رقم یا بیشتر باشد')
-    }
-
-}else{
-  res.send('لطفا همه موارد را کامل کنید');
+  }else{
+    res.json({msg:"لطفا همه موارد را کامل کنید"});
   }
 });
 
+app.post("/api/singup", (req, res, next) => {
+  console.log(req.body);
+});
 
 module.exports = app;

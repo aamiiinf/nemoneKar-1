@@ -14,7 +14,7 @@
     background-color: rgb(99, 99, 99);
     color: white;
     margin-right: 0px;
-    margin-left: 0px;  
+    margin-left: 0px;
 }
 #main_menu .main_list
 {
@@ -37,7 +37,7 @@
 }
 .main_list ul
 {
-    background:url('http://aminy.ir/wp-content/gallery/album/stationery-main.png')
+    background:url('http://buildhall.com/wp-content/uploads/2018/06/introduction-300x129.png')
     left bottom #fff  no-repeat;
     position: absolute;
     top: 30;
@@ -85,7 +85,7 @@
     margin-right: 20px !important;
     line-height: 20px !important;
 }
-.main_list ul ol li:first-of-type 
+.main_list ul ol li:first-of-type
 {
     list-style: none;
     font-size:13px;
@@ -106,11 +106,6 @@
 .main_list ul
 {
     display:none;
-}
-.img{
-    width: 150px;
-    height: 45px;
-    
 }
 .rtl{
     direction: rtl;
@@ -154,7 +149,7 @@
     }
 }
 
-input[type=text] {
+.input[type=text] {
     width: 130px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -162,20 +157,139 @@ input[type=text] {
     font-size: 16px;
     background-color: rgb(255, 255, 255);
     background-image: url('../../../assets/icons8-search-24.png');
-    background-position: 2px 2px; 
+    background-position: 2px 2px;
     background-repeat: no-repeat;
     padding: 2px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
   }
-  
-  input[type=text]:focus {
+
+  .input[type=text]:focus {
     width: 100%;
   }
   .a-link a:hover{
     color:#ffb400 !important;
   }
-  .a-link img{
-      width: 20px;
-      height: 20px;
+
+
+  //assasasasasasassa
+
+
+
+  .sidenav {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    background-color: rgb(235, 235, 235);
+    overflow-x: hidden;
+    padding-top: 60px;
+    background:url('http://buildhall.com/wp-content/uploads/2018/06/introduction-300x129.png')
+    left bottom #fff  no-repeat;
+    direction: rtl;
   }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #4e4e4e;
+    display: block;
+    text-align: right;
+
+  }
+   #link_1{
+      padding-right: 185px;
+    }
+  .sidenav a:hover {
+    color: #acacac;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .div-style{
+    font-size:30px;
+    cursor:pointer;
+    text-align: right;
+    padding: 0px 15px;
+    color: white;
+  }
+  .div-style:hover{
+    color:#ffb400 !important;
+  }
+  #div-1{
+    background-color: rgb(99, 99, 99);
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  @media screen and (min-width: 680px) {
+      #div-1{
+          display: none;
+      }
+  }
+  .img{
+    height: 60px;
+    width: 100px;
+  }
+  @media screen and (max-width: 680px) {
+    .img{
+      width: 50px;
+      height: 30px;
+    }
+  }
+  @media screen and (min-width: 680px) {
+    .sing2{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 290px) {
+    .img{
+      width: 70px;
+      height: 25px;
+    }
+  }
+  @media screen and (max-width: 280px) {
+    #link_1{
+      padding-right: 130px;
+    }
+    .sing{
+        display: none;
+    }
+
+  }
+  @media screen and (max-width: 180px) {
+    #link_1{
+      padding-right: 80px;
+    }
+    .img{
+      width: 55px;
+      height: 25px;
+    }
+  }
+.demo{
+  background-color: yellowgreen;
+  padding: 0;
+  margin: 0;
+}
+.dropdown:hover{
+  color: rgb(209, 209, 209);
+}
+.div-11{
+  margin-top: 4em;
+}
+.sing2{
+  background-color:#444;
+  width: 100%;
+  height: auto;
+}

@@ -19,8 +19,8 @@ export class SingInComponent {
     password: string,
     password2: string,
     email: string,
-    title: string,
-    tell: number
+    tell: number,
+    title: string
   ) {
     const users: Users = {
       id: null,
@@ -29,11 +29,14 @@ export class SingInComponent {
       password: password,
       password2: password2,
       email: email,
-      title: title,
-      tell: tell
+      tell: tell,
+      title: title
     }
-    this.http.post<{ msg: string }>("http://localhost:3000/api/singin", users)
+    this.http.post<{ msg: string, msg2:string }>("http://localhost:3000/api/singin", users)
     .subscribe((data) => {
+      if(data.msg2){
+        alert(data.msg2)
+      }
         this.massage = data.msg
       });
   }
@@ -45,8 +48,8 @@ export class SingInComponent {
       form.value.password,
       form.value.password2,
       form.value.email,
-      form.value.title,
-      form.value.tell
+      form.value.tell,
+      form.value.title
       );
     form.resetForm();
   }

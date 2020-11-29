@@ -12,4 +12,11 @@ export class MegaMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openNav() {
+    document.getElementById("mySidenav").style.display = "block";
+  }
+  closeNav() {
+    document.getElementById("mySidenav").style.display = "none";
+  }
+
 }

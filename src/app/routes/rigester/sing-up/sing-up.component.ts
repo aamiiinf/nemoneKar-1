@@ -13,8 +13,8 @@ export class SingUpComponent {
   constructor(private http:HttpClient) { }
 
   addPost(email: string, password: string) {
-    this.http.post("http://localhost:3000/api/singup", { email: email, password: password }).subscribe((data) => {
-        alert(data);
+    this.http.post<{ msg: string, msg2:string }>("http://localhost:3000/api/singup", { email: email, password: password }).subscribe((data) => {
+        alert(data.msg);
       });
   }
 

@@ -1,86 +1,181 @@
-<div class="container-fluid p-0 dis_n rtl">
-    
-    <div class="row top-1">
-        <div class="a-link col-sm-4 text-right">
-            <!-- <img src="../../../assets/icons8-join-32.png" alt=""> -->
-            <a routerLink="/sing-in" routerLinkActive="active" class="text-white mr-1 p-1">عضویت</a>
-            /
-            <a routerLink="/sing-up" routerLinkActive="active" class="text-white  p-1">ورود</a>
+<div id="div-1">
+  <div id="mySidenav" class="sidenav p-2">
+    <div>
+      <a id="link_1" href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    </div>
+    <div class="div-11">
+      <form class="form-inline waves-light" mdbWavesEffect>
+        <div class="md-form mt-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="...جستجو">
         </div>
-        <div class="col-sm-4">
-            <form style="text-align:center">
-                <input class="mt-3" type="text" name="search" placeholder="جستجو ...">
-            </form>
-        </div>
-        <div class="col-sm-4">
-            <img class="img m-2" src="../../../assets/Logo1.png" alt="notFound">
-        </div>
+      </form>
     </div>
 
-    
-    <div class="sticky-top">
-        <nav class="">
-        <ul id="main_menu">
-            <li class="main_list"><a href="">محصولات زیبایی<i class="icon"></i></a>
-                <ul>
-                    <ol>
-                        <a class="mmmk" href="">
-                            <li>نام دسته۱</li>
-                        </a>
-                        <a href="">
-                            <li class="main_list2">آیتم ۱</li>
-                        </a>
-                        <a href="">
-                            <li class="main_list2">آیتم ۲</li>
-                        </a>
-                    </ol>
-                    <ol>
-                        <a class="mmmk" href="">
-                            <li>نام دسته</li>
-                        </a>
-                        <a href="">
-                            <li class="main_list2">آیتم ۱</li>
-                        </a>
-                        <a href="">
-                            <li class="main_list2">آیتم ۲</li>
-                        </a>
-                    </ol>
-                </ul>
-            </li>
-            <li class="main_list"><a href="">محصولات بهداشتی<i class="icon"></i></a>
-                <ul>
-                    <ol>
-                        <a class="mmmk" href="">
-                            <li>نام دسته۱</li>
-                        </a>
-                        <a href="">
-                            <li class="main_list2">آیتم ۱</li>
-                        </a>
-                        <a href="">
-                            <li class="main_list2">آیتم ۲</li>
-                        </a>
-                    </ol>
-                    <ol>
-                        <a class="mmmk" href="">
-                            <li>نام دسته</li>
-                        </a>
-                        <a href="">
-                            <li class="main_list2">آیتم ۱</li>
-                        </a>
-                        <a href="">
-                            <li class="main_list2">آیتم ۲</li>
-                        </a>
-                    </ol>
-                </ul>
-            </li>
-            <li class="main_list_2 px-3">
-                <a class="text_color" href="#">درباره ما</a>
-            </li>
-            <li class="main_list_2 px-3">
-                <a class="text_color" href="#">تماس با ما</a>
-            </li>
-        </ul>  
-        </nav>
-      
+    <div class="dropdown">
+      <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+        محصولات زیبایی
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">ایتم 1</a>
+        <a class="dropdown-item" href="#">ایتم 2</a>
+        <a class="dropdown-item" href="#">ایتم 3</a>
+        <a class="dropdown-item" href="#">ایتم 4</a>
+      </div>
     </div>
-</div>    
+    <div class="dropdown">
+      <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+        محصولات بهداشتی
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">ایتم 1</a>
+        <a class="dropdown-item" href="#">ایتم 2</a>
+        <a class="dropdown-item" href="#">ایتم 3</a>
+        <a class="dropdown-item" href="#">ایتم 4</a>
+      </div>
+    </div>
+    <a href="#">درباره ما</a>
+    <a href="#">تماس با ما</a>
+  </div>
+  <div class="d-flex justify-content-between">
+    <div>
+      <img class="img m-2" src="./assets/Logo1.png" alt="notFound">
+    </div>
+    <div class="sing text-right text-white">
+  </div>
+    <div class="div-style" (click)="openNav()">&#9776;</div>
+  </div>
+</div>
+<div class="sing2">
+  <div class="d-flex">
+    <div class="mr-auto">
+      <button mdbBtn type="button" color="pink" size="sm" mdbWavesEffect>
+        <span class="badge badge-light">0</span>
+        <span style="font-size:12px;" class="px-2">سبد خرید</span>
+        <mdb-icon fas icon="shopping-basket"></mdb-icon>
+      </button>
+    </div>
+    <div class="px-2">
+      <a style="font-size: 12px;font-family: tahoma;"
+          routerLink="/sing-in"
+          routerLinkActive="active"
+          class="text-white text_color">
+        <span>عضویت</span>
+        <mdb-icon class="pl-1" fas icon="unlock"></mdb-icon>
+      </a>
+    </div>
+    <div>
+      <a style="font-size: 12px;font-family: tahoma;"
+          routerLink="/sing-up"
+          routerLinkActive="active"
+          class="text-white text_color">
+        <span>ورود</span>
+        <mdb-icon class="px-1" fas icon="sign-in-alt"></mdb-icon>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid p-0 dis_n">
+
+    <div class="row top-1">
+        <div class="a-link col-sm-4 text-left">
+          <a class="text_color" style="font-size: 12px;" href="#" data-toggle="modal" data-target="#myModal">درباره ما</a>
+          <span class="px-2">|</span>
+          <a class="text_color pl-2" style="font-size: 12px;" href="#">تماس با ما</a>
+          <br>
+          <div>
+            <button mdbBtn type="button" color="pink" size="sm" mdbWavesEffect>
+              <span class="badge badge-light">0</span>
+              <span style="font-size:12px;" class="px-2">سبد خرید</span>
+              <mdb-icon fas icon="shopping-basket"></mdb-icon>
+            </button>
+          </div>
+        </div>
+        <div class="col-sm-4 rtl">
+            <form style="text-align:center">
+                <input class="mt-2 input" type="text" name="search" placeholder="جستجو ...">
+            </form>
+        </div>
+        <div class="col-sm-4 text-right">
+            <img class="img pt-1" src="../../../assets/Logo1.png" alt="notFound">
+        </div>
+    </div>
+</div>
+
+<div class="dis_n sticky-top">
+  <nav>
+  <ul id="main_menu">
+      <li class="main_list"><a href="">محصولات زیبایی<i class="icon"></i></a>
+          <ul>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>نام دسته۱</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آیتم ۱</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آیتم ۲</li>
+                  </a>
+              </ol>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>نام دسته</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آیتم ۱</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آیتم ۲</li>
+                  </a>
+              </ol>
+          </ul>
+      </li>
+      <li class="main_list"><a href="">محصولات بهداشتی<i class="icon"></i></a>
+          <ul>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>نام دسته۱</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آیتم ۱</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آیتم ۲</li>
+                  </a>
+              </ol>
+              <ol>
+                  <a class="mmmk" href="">
+                      <li>نام دسته</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آیتم ۱</li>
+                  </a>
+                  <a href="">
+                      <li class="main_list2">آیتم ۲</li>
+                  </a>
+              </ol>
+          </ul>
+      </li>
+      <li class="main_list_2 px-4">
+          <a style="font-size: 12px;font-family: tahoma;"
+              routerLink="/sing-in"
+              routerLinkActive="active"
+              class="text-white text_color">
+            <span>عضویت</span>
+            <mdb-icon class="pl-1" fas icon="unlock"></mdb-icon>
+          </a>
+      </li>
+      <li class="main_list_2">
+          <a style="font-size: 12px;font-family: tahoma;"
+              routerLink="/sing-up"
+              routerLinkActive="active"
+              class="text-white text_color">
+            <span>ورود</span>
+            <mdb-icon class="px-1" fas icon="sign-in-alt"></mdb-icon>
+          </a>
+      </li>
+  </ul>
+  </nav>
+</div>
+
